@@ -10,22 +10,9 @@
 		A43469AF2DA134D800994639 /* Africa SwiftUI MasterClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Africa SwiftUI MasterClass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A43469DC2DA138B400994639 /* Exceptions for "Africa SwiftUI MasterClass" folder in "Africa SwiftUI MasterClass" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Africa-SwiftUI-MasterClass-Info.plist",
-			);
-			target = A43469AE2DA134D800994639 /* Africa SwiftUI MasterClass */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A43469B12DA134D800994639 /* Africa SwiftUI MasterClass */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A43469DC2DA138B400994639 /* Exceptions for "Africa SwiftUI MasterClass" folder in "Africa SwiftUI MasterClass" target */,
-			);
 			path = "Africa SwiftUI MasterClass";
 			sourceTree = "<group>";
 		};
