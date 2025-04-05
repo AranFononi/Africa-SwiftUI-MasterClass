@@ -11,6 +11,7 @@ struct MapAnnotationView: View {
     // MARK: - Properties
     @State private var animation: Double = 0
     var location: NationalParkLocation
+    
     var body: some View {
         ZStack {
             Circle()
@@ -37,7 +38,7 @@ struct MapAnnotationView: View {
     }
 }
 
-#Preview {
-    var locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
-    MapAnnotationView(location: locations[0])
-}
+//#Preview {
+//    var locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
+//    MapAnnotationView(location: locations[0])
+//}
