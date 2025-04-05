@@ -15,7 +15,6 @@ struct AnimalDetailView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment:.center, spacing: 20) {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                 
                 // Hero Image
                 Image(animal.image)
@@ -43,6 +42,10 @@ struct AnimalDetailView: View {
                     .padding(.horizontal)
                 
                 // Gallery
+                Group {
+                    HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
+                }
+                .padding(.horizontal)
                 
                 // Facts
                 
