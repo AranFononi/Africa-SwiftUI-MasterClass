@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct VideoListView: View {
+    // MARK: - Properties
+    
     var body: some View {
         Text("Video")
     }
