@@ -1,5 +1,5 @@
 //
-//  VideoListView.swift
+//  MapView.swift
 //  Africa SwiftUI MasterClass
 //
 //  Created by Aran Fononi on 5/4/25.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct VideoListView: View {
+struct MapView: View {
     var body: some View {
-        Text("Video")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    VideoListView()
+    MapView()
 }
