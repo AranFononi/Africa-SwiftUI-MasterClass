@@ -16,11 +16,13 @@ struct InsetFactView: View {
             TabView {
                 ForEach(animal.fact, id: \.self) { item in
                     Text(item)
+                        .multilineTextAlignment(.center)
                 } //: Loop
+                
 
             } //: Tab
             .tabViewStyle(PageTabViewStyle())
-            .frame(minHeight: 148, idealHeight: 168 , maxHeight: 180)
+            .frame(minHeight: 148, idealHeight: 168 , maxHeight: 190)
         } //: Box
     }
 }
