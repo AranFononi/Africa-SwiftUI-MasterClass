@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VideoListItem: View {
+struct VideoListItemView: View {
     // MARK: - Properties
     let video: Video
     
@@ -43,5 +43,5 @@ struct VideoListItem: View {
 
 #Preview {
     let videos: [Video] = Bundle.main.decode("videos.json")
-    VideoListItem(video: videos[0])
+    VideoListItemView(video: videos[0])
 }
