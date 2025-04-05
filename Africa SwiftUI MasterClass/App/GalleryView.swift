@@ -1,5 +1,5 @@
 //
-//  MapView.swift
+//  GalleryView.swift
 //  Africa SwiftUI MasterClass
 //
 //  Created by Aran Fononi on 5/4/25.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct MapView: View {
+struct GalleryView: View {
     var body: some View {
-        Text("Map")
+        Text("Gallery")
     }
 }
 
 #Preview {
-    MapView()
+    GalleryView()
 }
