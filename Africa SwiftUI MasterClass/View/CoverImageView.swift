@@ -11,7 +11,15 @@ struct CoverImageView: View {
     // MARK: - Properties
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            ForEach(0 ..< 5) { item in
+                Image("cover-lion")
+                    .resizable()
+                    .scaledToFit()
+            } //: Loop
+        } //: Tab
+        .tabViewStyle(PageTabViewStyle())
+       
     }
 }
 
