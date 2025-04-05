@@ -76,7 +76,15 @@ struct AnimalDetailView: View {
                 
                 }
                 .padding(.horizontal)
+                
                 // Link
+                Group {
+                    HeadingView(headingImage: "books.vertical", headingText: "Learn More")
+                    
+                    ExternalWeblinkView(animal: animal)
+                
+                }
+                .padding(.horizontal)
                 
             } //: VStack
             .navigationTitle("Learn About \(animal.name)")
