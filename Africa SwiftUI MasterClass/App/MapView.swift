@@ -28,10 +28,7 @@ struct MapView: View {
         Map(position: $region, selection: $selection) {
             ForEach(locations) { location in
                 Annotation(location.name, coordinate: location.location) {
-                    Image("logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32, height: 32, alignment: .center)
+                    MapAnnotationView(location: location)
                 }
             }
         }
