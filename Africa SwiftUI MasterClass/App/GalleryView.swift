@@ -13,14 +13,7 @@ struct GalleryView: View {
     @State private var selectedAnimal: String = "lion"
     
     let animals: [Animal] = Bundle.main.decode("animals.json")
-    
-    // let gridLayout: [GridItem] = [
-    //     GridItem(.flexible()),
-    //     GridItem(.flexible()),
-    //     GridItem(.flexible())
-    // ]
-    
-    //let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
+    let haptics = UIImpactFeedbackGenerator(style: .light)
     
     @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
     @State private var gridColumn: Double = 3.0
@@ -45,7 +38,10 @@ struct GalleryView: View {
                 Slider(value: $gridColumn, in: 2...4, step: 1)
                     .padding(.horizontal)
                     .onChange(of: gridColumn) { oldValue, newValue in
-                        gridSwitch()
+                        withAnimation(.spring(duration: 0.3)) {
+                            gridSwitch()
+                            haptics.impactOccurred()
+                        }
                     }
                 
                 
@@ -59,12 +55,17 @@ struct GalleryView: View {
                             .overlay(Circle().stroke(Color.white, lineWidth: 1))
                             .onTapGesture {
                                 selectedAnimal = item.image
+                                haptics.impactOccurred()
                             }
                     } //: Loop
                 } //: Grid
                 .onAppear {
-                    gridSwitch()
+                    withAnimation(.spring(duration: 0.3)) {
+                        gridSwitch()
+                    }
                 }
+                
+                
             } //: VStack
             .padding(.horizontal, 10)
             .padding(.vertical, 50)
