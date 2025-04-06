@@ -20,8 +20,11 @@ struct ContentView: View {
     @State private var toolbarIcon: String = "square.grid.2x2"
     
     func gridSwitch() {
-        gridLayout = Array(repeating: .init(.flexible()), count: gridLayout.count % 3 + 1)
-        gridColumn = gridLayout.count
+        withAnimation(.spring) {
+            gridLayout = Array(repeating: .init(.flexible()), count: gridLayout.count % 3 + 1)
+            gridColumn = gridLayout.count
+        }
+        
         
         switch gridColumn {
         case 1:
@@ -29,7 +32,7 @@ struct ContentView: View {
         case 2:
             toolbarIcon = "square.grid.3x2"
         case 3:
-            toolbarIcon = "square.grid.1x2"
+            toolbarIcon = "rectangle.grid.1x2"
         default:
             toolbarIcon = "square.grid.2x2"
         }
@@ -49,17 +52,15 @@ struct ContentView: View {
                             NavigationLink(destination: AnimalDetailView(animal: animal)) {
                                 AnimalListItemView(animal: animal)
                             } //: Link
-                            
                         } //: Loop
                     } //: List
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
-                        LazyVStack(columns: gridLayout, alignment: .center, spacing: 10) {
+                        LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
                             ForEach(animals) { animal in
                                 NavigationLink(destination: AnimalDetailView(animal: animal)) {
-                                    withAnimation(.spring(duration: 0.5)) {
-                                        AnimalGridItemView(animal: animal)
-                                    }
+                                    AnimalGridItemView(animal: animal)
+                                    
                                 } //: Link
                             } //: Loop
                         } //: Grid
