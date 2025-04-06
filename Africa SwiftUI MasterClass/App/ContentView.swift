@@ -53,6 +53,10 @@ struct ContentView: View {
                                 AnimalListItemView(animal: animal)
                             } //: Link
                         } //: Loop
+                        
+                        CreditsView()
+                            .modifier(CenterModifier())
+                            
                     } //: List
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
@@ -99,6 +103,7 @@ struct ContentView: View {
                 } //: Item
             } //: Toolbar
         } //: Navigation
+        .navigationSplitViewStyle(.balanced)
     }
 }
 

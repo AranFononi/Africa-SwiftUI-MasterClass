@@ -40,6 +40,7 @@ struct VideoListView: View {
                 hapticImpact.impactOccurred()
             }
         } //: Navigation
+        .navigationSplitViewStyle(.balanced)
     }
 }
 

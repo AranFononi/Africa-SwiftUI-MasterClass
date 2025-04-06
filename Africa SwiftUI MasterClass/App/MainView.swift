@@ -31,6 +31,7 @@ struct MainView: View {
                     Text("Gallery")
                 }
         } //: Tab
+        .tabViewStyle(.tabBarOnly)
     }
 }
 
